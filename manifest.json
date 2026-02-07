@@ -1,0 +1,10 @@
+{
+  "name": "天气日历",
+  "short_name": "天气",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f0f2f5",
+  "theme_color": "#667eea",
+  "description": "天气预报与日历 - 每日贴心建议",
+  "icons": []
+}
