@@ -1,125 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="theme-color" content="#667eea">
-  <title>天气日历</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="manifest.json">
-  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌤</text></svg>">
-</head>
-<body>
-  <div id="app">
-    <!-- Header -->
-    <header class="app-header">
-      <div class="header-left">
-        <span class="header-icon">📍</span>
-        <span id="city-name" class="city-name">定位中...</span>
-      </div>
-      <div class="header-right">
-        <button id="refresh-btn" class="icon-btn" aria-label="刷新">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M23 4v6h-6M1 20v-6h6"/>
-            <path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/>
-          </svg>
-        </button>
-      </div>
-    </header>
-
-    <!-- Current Weather Card -->
-    <section class="weather-hero">
-      <div class="weather-icon-large" id="current-weather-icon">--</div>
-      <div class="current-temp" id="current-temp">--°</div>
-      <div class="weather-desc" id="weather-desc">加载中...</div>
-      <div class="weather-details">
-        <div class="detail-item">
-          <span class="detail-icon">💧</span>
-          <span class="detail-label">湿度</span>
-          <span class="detail-value" id="humidity">--%</span>
-        </div>
-        <div class="detail-item">
-          <span class="detail-icon">🌬</span>
-          <span class="detail-label">风速</span>
-          <span class="detail-value" id="wind-speed">-- km/h</span>
-        </div>
-        <div class="detail-item">
-          <span class="detail-icon">🌡</span>
-          <span class="detail-label">体感</span>
-          <span class="detail-value" id="feels-like">--°</span>
-        </div>
-        <div class="detail-item">
-          <span class="detail-icon">☀️</span>
-          <span class="detail-label">紫外线</span>
-          <span class="detail-value" id="uv-index">--</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Daily Suggestion -->
-    <section class="suggestion-card">
-      <div class="section-title">
-        <span>💡</span> 今日建议
-      </div>
-      <div class="suggestion-content" id="daily-suggestion">
-        正在为你生成今日建议...
-      </div>
-    </section>
-
-    <!-- Hourly Forecast -->
-    <section class="hourly-section">
-      <div class="section-title">
-        <span>🕐</span> 逐时预报
-      </div>
-      <div class="hourly-scroll" id="hourly-forecast">
-        <!-- Dynamically generated -->
-      </div>
-    </section>
-
-    <!-- 7-Day Forecast -->
-    <section class="forecast-section">
-      <div class="section-title">
-        <span>📅</span> 未来7天预报
-      </div>
-      <div class="forecast-list" id="weekly-forecast">
-        <!-- Dynamically generated -->
-      </div>
-    </section>
-
-    <!-- Calendar -->
-    <section class="calendar-section">
-      <div class="section-title">
-        <span>🗓</span> 日历
-      </div>
-      <div class="calendar-nav">
-        <button id="prev-month" class="nav-btn">&lt;</button>
-        <span id="calendar-month-year" class="calendar-title">2026年2月</span>
-        <button id="next-month" class="nav-btn">&gt;</button>
-      </div>
-      <div class="calendar-grid">
-        <div class="calendar-header">
-          <span>日</span><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span>
-        </div>
-        <div class="calendar-days" id="calendar-days">
-          <!-- Dynamically generated -->
-        </div>
-      </div>
-      <!-- Day Detail -->
-      <div class="day-detail" id="day-detail" style="display:none;">
-        <div class="day-detail-header" id="day-detail-header"></div>
-        <div class="day-detail-weather" id="day-detail-weather"></div>
-        <div class="day-detail-suggestion" id="day-detail-suggestion"></div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="app-footer">
-      <p>数据来源: Open-Meteo API</p>
-    </footer>
-  </div>
-
-  <script src="app.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#667eea" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌤</text></svg>" />
+    <title>天气日历</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
